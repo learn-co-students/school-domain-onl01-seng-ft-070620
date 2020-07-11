@@ -1,7 +1,7 @@
-## 1. Create a School class that is initialized
-##      with a #name argument
-## 2. Create a #roster method that initializes
-##      to an empty hash 
+## 1. Create a School class that is initialized with:
+##    -A @name argument for the school name.
+##    -@roster set to an empty hash.
+## 2. Create a reader/writer for #name and #roster.
 ## 3. Create a #add_student method that takes in
 ##      a name and grade parameter and adds them
 ##      to the #roster hash.
@@ -21,22 +21,19 @@
 require 'pry'
 
 class School
+    attr_accessor :name, :roster
 
     def initialize(name)
         @name = name
         @roster = {}
     end 
 
-    def roster 
-        @roster
-    end 
-
-    def add_student(name, grade)
+    def add_student(student_name, grade)
             if @roster[grade] == nil
                 @roster[grade] = []
-                @roster[grade] << name
+                @roster[grade] << student_name
             else
-                @roster[grade] << name
+                @roster[grade] << student_name
             end 
     end 
 
