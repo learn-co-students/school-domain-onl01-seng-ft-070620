@@ -1,6 +1,6 @@
 ## 1. Create a School class that is initialized with:
 ##    -A @name argument for the school name.
-##    -@roster set to an empty hash.
+##    -Set @roster to an empty array
 ## 2. Create a reader/writer for #name and #roster.
 ## 3. Create a #add_student method that takes in
 ##      a name and grade parameter and adds them
